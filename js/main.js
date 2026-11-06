@@ -286,7 +286,7 @@ sky?.setColors(DEFAULT_SKY);
 
 sw.addEventListener('change', e => {
   const on = $$('input:checked', sw);
-  if (on.length > 3) { e.target.checked = false; return; }
+  if (on.length > 4) { e.target.checked = false; return; }
   const list = $$('input:checked', sw).map(i => COLORS.find(c => c.id === i.value).hex);
   sky?.setColors(list.length ? list : DEFAULT_SKY);
 });
